@@ -1,0 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $fontTitle;
+	font-weight: 300;
+}
+
+p, li {
+	color: $black;
+}
+
+a {
+	transition: $transition;
+}

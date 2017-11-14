@@ -1,0 +1,228 @@
+header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: white;
+	box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+	z-index: 5;
+
+	.devWrapper {
+		padding: 20px 3%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		> div {
+			width: 24%;
+			text-align: right;
+		}
+
+		> a {
+			width: 24%;
+			text-decoration: none;
+			font-size: 14px;
+			color: $black;
+		}
+		
+		> p {
+			width: 50%;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $fontTitle;
+			letter-spacing: 1px;
+		}
+	}
+
+
+	.hamburger {
+		position: relative;
+		border: 0;
+		outline: none;
+		height: 22px;
+		width: 30px;
+		padding: 0;
+		background: transparent;
+		z-index: 7;
+
+		span {
+			position: absolute;
+			width: 30px;
+			height: 2px;
+			background: $black;
+			right: 0;
+			transition: $transition;
+
+			&:nth-child(1) {
+				top: 0;
+			}
+
+			&:nth-child(2) {
+				top: 10px;
+			}
+
+			&:nth-child(3) {
+				top: 20px;
+			}
+		}
+
+		&.showMenu {
+			span {
+				&:nth-child(1) {
+					transform: rotate(45deg);
+					top: 10px;
+				}
+
+				&:nth-child(2) {
+					opacity: 0;
+				}
+
+				&:nth-child(3) {
+					transform: rotate(-45deg);
+					top: 10px;
+				}
+			}
+		}
+	}
+
+	nav {
+		position: fixed;
+		background: white;
+		height: 100vh;
+		width: 90%;
+		max-width: 350px;
+		top: 0;
+		right: -100%;
+		padding: 80px 20px 20px;
+		box-shadow: -10px 0 25px rgba(0,0,0,0.05);
+		z-index: 6;
+		transition: all 0.35s ease;
+
+		&.showMenu {
+			right: 0;
+		}
+
+		> span {
+			position: absolute;
+			top: 15px;
+			width: calc(100% - 40px);
+			display: block;
+			font-family: $fontTitle;
+			font-size: 30px;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			color: $c3;
+			border-bottom: 2px solid $c3;
+			padding-bottom: 10px;
+		}
+
+		ul.subMenu {
+			position: absolute;
+			height: calc(100% - 100px);
+			width: calc(100% - 40px);
+			top: 80px;
+			right: -100%;
+			background: white;
+			z-index: 7;
+			overflow: auto;
+			transition: $transition;
+
+			a {
+				font-size: 16px;
+
+				.fa {
+					position: relative;
+					font-size: 16px;
+					color: inherit;
+					padding-right: 10px;
+				}
+
+				&:hover,
+				&:focus {
+					padding-left: 20px;
+				}
+			}
+
+			&.showSubMenu {
+				right: 20px;
+			}
+		}
+
+		li {
+			list-style: none;
+			margin: 5px 0;
+			border-bottom: 1px solid rgba(0,0,0,0.05);
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			&.backSubMenu {
+				border-bottom: 0;
+
+				a {
+					text-transform: uppercase;
+					font-family: $fontTitle;
+					letter-spacing: 2px;
+					color: $c2;
+
+					&:hover,
+					&:focus {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+
+		a {
+			position: relative;
+			display: block;
+			text-decoration: none;
+			color: $black;
+			padding: 10px 0;
+			font-size: 18px;
+			outline: none;
+
+			&:hover,
+			&:focus {
+				color: $c2;
+			}
+
+			.fa {
+				position: absolute;
+				right: 0;
+				font-size: 30px;
+				color: $c2;
+			}
+		}
+
+		> span.menuSocial {
+			bottom: 0;
+			border: 0;
+			top: auto;
+			font-size: 16px;
+			letter-spacing: 2px;
+			text-align: center;
+
+			a {
+				display: inline-block;
+				margin: 5px;
+
+				.fa {
+					position: relative;
+					font-size: 26px;
+					color: $c3;
+					transition: $transition;
+				}
+
+				&:hover,
+				&:focus {
+					.fa {
+						color: $c2;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,586 @@
+/*!
+* Theme Name: Custom Theme
+* Theme URI: http://cjreyes.ca;
+* Description: Custom theme for rentofficespacetoronto.com
+* Version: 1.0
+* Author: CJ Reyes
+* Author URI: http://cjreyes.ca
+*/
+
+@import 'normalize';
+
+/*
+====================================
+Default Styling
+====================================
+*/
+
+$fontTitle: 'Work Sans', sans-serif;
+$fontMain: 'Open Sans', sans-serif;
+$transition: all 0.3s ease;
+
+$c1: #77c9d4;
+$c2: #57bc90;
+$c3: #015249;
+$c4: #efefef;
+$black: #333;
+
+$gradient: linear-gradient(-45deg, $c2, $c1);
+
+html,
+body {
+	font-family: $fontMain;
+	margin: 0 13px;
+}
+
+.devWrapper {
+	padding: 8%;
+}
+
+.fullButton {
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 0;
+	border: 0;
+	font-weight: 400;
+	font-size: 14px;
+	color: white;
+	background: $c3;
+	text-transform: uppercase;
+	font-family: $fontTitle;
+	transition: $transition;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+	}
+}
+
+/*
+====================================
+End Default Styling
+====================================
+*/
+
+/*
+====================================
+Home Page Styling
+====================================
+*/
+
+// HOME BANNER
+
+.banner,
+.innerBanner {
+	margin-top: 80px;
+}
+
+.innerBanner {
+	background: $gradient;
+
+	h1 {
+		text-align: center;
+		color: white;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 40px;
+	}
+}
+
+.banner .devWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	height: 85vh;
+	min-height: 400px;
+	padding: 0;
+}
+
+.leftBanner {
+	position: relative;
+	width: 45%;
+	height: 100%;
+	padding-left: 3%;
+	background: $c3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		position: relative;
+		color: white;
+		font-size: 60px;
+		text-align: right;
+		z-index: 2;
+	}
+
+	&:before {
+		position: absolute;
+		content: "";
+		height: 100%;
+		width: 50%;
+		background: $c3;
+		transform: skew(-8deg);
+		top: 0;
+		right: -10%;
+		box-shadow: 10px 0 20px rgba(0,0,0,0.08);
+		z-index: 1;
+	}
+}
+
+.rightBanner {
+	position: relative;
+	width: 55%;
+	height: 100%;
+	background-image: url('http://rentofficespacetoronto.com/wp-content/uploads/2017/11/toronto-city-background.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 0 5% 0 10%;
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: $gradient;
+		opacity: 0.9;
+	}
+
+	h2 {
+		position: relative;
+		color: #e8e8e8;
+		font-size: 36px;
+		margin-bottom: 20px;
+		z-index: 1;
+		text-shadow: 0 5px 20px rgba(0,0,0,0.25);
+	}
+
+	form {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		z-index: 1;
+	}
+
+	.select {
+		position: relative;
+		width: calc(50% - 10px);
+		margin: 10px 5px;
+
+		&:nth-child(1) {
+			width: calc(100% - 10px);
+		}
+
+		&:after {
+			position: absolute;
+			font-family: 'FontAwesome';
+			content: '\f0d7';
+			right: 10px;
+			top: 10px;
+		}
+	}
+
+	select {
+		-webkit-appearance: none;
+		border-radius: 0;
+		padding: 10px;
+		font-size: 14px;
+		width: 100%;
+		background: #e8e8e8;
+		color: #333a56;
+		border: 0;
+		font-family: $fontMain;
+	}
+
+	button {
+		padding: 10px 30px;
+		border-radius: 0;
+		border: 0;
+		font-weight: 400;
+		font-size: 14px;
+		color: $c3;
+		background: white;
+		text-transform: uppercase;
+		font-family: $fontTitle;
+		margin: 20px 5px 0;
+		box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+		transition: $transition;
+
+		&:hover,
+		&:focus {
+			background: $c3;
+			color: white;
+			cursor: pointer;
+		}
+	}
+}
+
+
+// HOME CONTACT BANNER
+
+.homeContact {
+	text-align: center;
+
+	.devWrapper {
+		max-width: 800px;
+		margin: auto;
+		padding: 8% 0;
+	}
+
+	h2 {
+		color: $c3;
+		font-size: 40px;
+		font-weight: 400;
+		max-width: 600px;
+		margin: 0 auto 4%;
+	}
+
+	.fullButton {
+		margin-top: 6%;
+	}
+}
+
+
+// NEIGHBOURHOODS
+
+.homeNeighbourhoods {
+	background: $c4;
+
+	.devWrapper {
+		text-align: center;
+		padding-bottom: 2%;
+	}
+
+	h2 {
+		color: $c3;
+		font-size: 40px;
+		font-weight: 400;
+		max-width: 600px;
+		margin: auto;
+	}
+
+	p {
+		max-width: 800px;
+		margin: 20px auto 6%;
+	}
+}
+
+.neighbourhoodsGroup {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.neighbourhoodSingle {
+	width: 200px;
+	margin: 0 10px 8%;
+
+	a {
+		text-decoration: none;
+		color: white;
+
+		&:hover,
+		&:focus {
+			img {
+				filter: grayscale(1);
+			}
+
+			figure:after {
+				opacity: 0.7;
+			}
+
+			figure:before {
+				opacity: 1;
+			}
+		}
+	}
+
+	h3 {
+		display: inline-block;
+		background: $c3;
+		padding: 2px 15px;
+		font-size: 16px;
+	}
+
+	img {
+		transition: $transition;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+	}
+
+	figure {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin: 0 auto 20px;
+
+		&:before {
+			position: absolute;
+			font-family: 'FontAwesome';
+			content: "\f002";
+			color: white;
+			width: 100%;
+			text-align: center;
+			top: 50px;
+			font-size: 30px;
+			opacity: 0;
+			transition: $transition;
+			z-index: 5;
+		}
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			top: 0;
+			left: 0;
+			background: $gradient;
+			opacity: 0;
+			transition: $transition;
+		}
+	}
+}
+
+
+// HOME SOCIAL
+
+.homeSocial {
+	.devWrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.mediaGrid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 500px;
+	height: 500px;
+}
+
+.instaImage {
+	position: relative;
+	display: block;
+	width: calc(100% / 3 - 4px);
+	height: calc(100% / 3 - 4px);
+	margin: 2px;
+	background-size: cover;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 3px;
+	opacity: 0.8;
+
+	&:hover,
+	&:focus {
+		opacity: 1;
+	}
+}
+
+.homeSocialDetails {
+	text-align: center;
+	width: calc(90% - 500px);
+
+	h2 {
+		color: $c3;
+		font-size: 40px;
+		font-weight: 400;
+		margin: 0 auto 6%;
+	}
+
+	a {
+		display: block;
+		color: $c2;
+		font-size: 20px;
+		text-decoration: none;
+		margin: 10px auto;
+
+		&:hover,
+		&:focus {
+			color: $c3;
+
+			.fa {
+				opacity: 1;
+			}
+		}
+
+		.fa {
+			color: grey;
+			margin-right: 20px;
+			font-size: 24px;
+			opacity: 0.6;
+			transition: $transition;
+		}
+	}
+}
+
+/*
+====================================
+End Home Page Styling
+====================================
+*/
+
+/*
+====================================
+Blog Styling
+====================================
+*/
+
+.listingWrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.blogPost {
+	display: block;
+	width: calc(100% / 3 - 40px);
+	margin: 0 20px 6%;
+	text-decoration: none;
+
+	&:nth-child(1) {
+		width: calc(100% - 40px);
+
+		.postImg {
+			height: 250px;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		.postImg {
+			span {
+				opacity: 1;
+			}
+
+			&:after {
+				opacity: 0.5;
+			}
+		}
+	}
+
+	h3 {
+		color: $c3;
+	}
+}
+
+.postImg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+	height: 200px;
+	margin-bottom: 15px;
+
+	span {
+		position: relative;
+		padding: 10px 20px;
+		background: $gradient;
+		color: white;
+		text-transform: uppercase;
+		font-weight: 300;
+		font-family: $fontTitle;
+		font-size: 12px;
+		letter-spacing: 2px;
+		z-index: 1;
+		transition: $transition;
+		opacity: 0;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: black;
+		opacity: 0;
+		transition: $transition;
+	}
+}
+
+.postDate {
+	opacity: 0.8;
+	font-size: 14px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+.navigation {
+	margin-top: 20px;
+	padding-left: 20px;
+
+	li {
+		list-style: none;
+		display: inline-block;
+
+		a {
+			text-decoration: none;
+			padding: 5px;
+			margin-right: 5px;
+			opacity: 0.4;
+			color: $black;
+		}
+	}
+
+	li.active a,
+	li a:hover,
+	li a:focus {
+		opacity: 1;
+	}
+
+	li.active a {
+		color: $c3;
+		border-bottom: 2px solid $c3;
+	}
+
+	ul > a {
+		text-transform: uppercase;
+		text-decoration: none;
+		letter-spacing: 1px;
+		font-family: $fontTitle;
+		color: $c1;
+		font-weight: 400;
+		padding: 5px 10px;
+		opacity: 0.6;
+
+		&:hover,
+		&:focus {
+			color: $c3;
+			opacity: 1;
+		}
+	}
+}
+
+/*
+====================================
+End Blog Styling
+====================================
+*/
+
+@import 'typography';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'footer';
+@import 'mediaQueries';
+
