@@ -21,12 +21,21 @@ footer {
 		margin-bottom: 10px;
 	}
 
+	.leftFooter .footerSocial {
+		a {
+			display: inline-block;
+			font-size: 22px;
+			margin-right: 5px;
+		}
+	}
+
 	h3 {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		font-size: 14px;
 		font-weight: 400;
 		color: $c3;
+		font-family: $fontMain;
 		margin: 30px 0 20px;
 	}
 

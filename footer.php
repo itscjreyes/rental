@@ -6,6 +6,10 @@
 				<h3>Contact</h3>
 				<a href="tel:1885001713"><i class="fa fa-phone"></i> 1.800.500.1713</a>
 				<a href="mailto:#"><i class="fa fa-envelope"></i> email@emailaddress.com</a>
+				<div class="footerSocial">
+					<a href="https://facebook.com/RentSpaceToronto" target="_blank" title="Follow Us on Facebook"><i class="fa fa-facebook-official"></i></a>
+					<a href="https://www.instagram.com/rentofficetoronto/" target="_blank" title="Follow Us on Instagram"><i class="fa fa-instagram"></i></a>
+				</div>
 			</div>
 			<div class="rightFooter">
 				<h3>Neighbourhoods</h3>

@@ -39,8 +39,15 @@ reApp.init = function(){
 
 reApp.navigation = function(){
 	$('.hamburger').click(function(){
-		$('.hamburger').toggleClass('showMenu');
-		$('header nav').toggleClass('showMenu');
+		if($(this).hasClass('showMenu')){
+			console.log('close');
+			$('.hamburger').removeClass('showMenu');
+			$('header nav').removeClass('showMenu');
+		}
+		else {
+			$('.hamburger').addClass('showMenu');
+			$('header nav').addClass('showMenu');
+		}
 	});
 
 	$('.itemHasChildren a').click(function(e){
@@ -57,6 +64,7 @@ reApp.navigation = function(){
 }
 
 $(document).ready(function (){
+	console.log('ready');
 	photoFeed.init();
 	reApp.init();
 });

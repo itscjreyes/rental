@@ -1,10 +1,12 @@
 h1,
-h2,
+h2 {
+	font-family: $fontTitle;
+}
+
 h3,
 h4,
 h5 {
-	font-family: $fontTitle;
-	font-weight: 300;
+	font-family: $fontMain;
 }
 
 p, li {

@@ -1,21 +1,19 @@
-<?php get_header();  ?>
+<?php
 
-<div class="main">
-  <div class="container">
+get_header();  ?>
 
-    <div class="content">
-      <?php // Start the loop ?>
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<div class="innerBanner">
+  <div class="devWrapper">
+    <h1><?php the_title(); ?></h1>
+  </div>
+</div>
 
-        <h2><?php the_title(); ?></h2>
-        <?php the_content(); ?>
-
-      <?php endwhile; // end the loop?>
-    </div> <!-- /,content -->
-
-    <?php get_sidebar(); ?>
-
-  </div> <!-- /.container -->
-</div> <!-- /.main -->
+<div class="pageSection">
+  <div class="devWrapper">
+    <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      <?php the_content(); ?>
+    <?php endwhile; // end the loop?>
+  </div>
+</div>
 
 <?php get_footer(); ?>

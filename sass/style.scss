@@ -15,9 +15,9 @@ Default Styling
 ====================================
 */
 
-$fontTitle: 'Work Sans', sans-serif;
+$fontTitle: 'Pacifico', serif;
 $fontMain: 'Open Sans', sans-serif;
-$transition: all 0.3s ease;
+$transition: all 0.15s ease;
 
 $c1: #77c9d4;
 $c2: #57bc90;
@@ -47,7 +47,6 @@ body {
 	color: white;
 	background: $c3;
 	text-transform: uppercase;
-	font-family: $fontTitle;
 	transition: $transition;
 	text-decoration: none;
 
@@ -55,6 +54,63 @@ body {
 	&:focus {
 		box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 	}
+}
+
+span.neighbourhood-field {
+	position: relative;
+
+	&:nth-child(1) {
+		width: calc(100% - 10px);
+	}
+
+	&:after {
+		position: absolute;
+		font-family: 'FontAwesome';
+		content: '\f0d7';
+		right: 10px;
+		top: 8px;
+	}
+}
+
+select,
+input,
+textarea {
+	-webkit-appearance: none;
+	border-radius: 2px;
+	padding: 10px;
+	font-size: 14px;
+	width: 100%;
+	background: #e8e8e8;
+	border: 0;
+	font-family: $fontMain;
+}
+
+textarea {
+	height: 100px;
+	resize: none;
+}
+
+input[type="submit"] {
+	width: auto;
+	padding: 10px 30px;
+	border-radius: 0;
+	border: 0;
+	font-weight: 400;
+	font-size: 14px;
+	color: white !important;
+	background: $c3;
+	text-transform: uppercase;
+	transition: $transition;
+	margin-top: 30px;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+	}
+}
+
+.wpcf7-form-control-wrap {
+	display: block;
 }
 
 /*
@@ -73,7 +129,7 @@ Home Page Styling
 
 .banner,
 .innerBanner {
-	margin-top: 80px;
+	margin-top: 105px;
 }
 
 .innerBanner {
@@ -83,65 +139,25 @@ Home Page Styling
 		text-align: center;
 		color: white;
 		text-transform: uppercase;
+		font-family: $fontMain;
 		letter-spacing: 2px;
 		font-size: 40px;
 	}
 }
 
 .banner .devWrapper {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	height: 85vh;
-	min-height: 400px;
-	padding: 0;
-}
-
-.leftBanner {
 	position: relative;
-	width: 45%;
-	height: 100%;
-	padding-left: 3%;
-	background: $c3;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	justify-content: center;
-
-	h1 {
-		position: relative;
-		color: white;
-		font-size: 60px;
-		text-align: right;
-		z-index: 2;
-	}
-
-	&:before {
-		position: absolute;
-		content: "";
-		height: 100%;
-		width: 50%;
-		background: $c3;
-		transform: skew(-8deg);
-		top: 0;
-		right: -10%;
-		box-shadow: 10px 0 20px rgba(0,0,0,0.08);
-		z-index: 1;
-	}
-}
-
-.rightBanner {
-	position: relative;
-	width: 55%;
-	height: 100%;
-	background-image: url('http://rentofficespacetoronto.com/wp-content/uploads/2017/11/toronto-city-background.jpg');
+	height: 80vh;
+	min-height: 400px;
+	padding: 4%;
+	background-image: url('http://rentofficespacetoronto.com/wp-content/uploads/2017/11/home-banner-img.jpg');
 	background-size: cover;
 	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-	padding: 0 5% 0 10%;
-
+	
 	&:after {
 		position: absolute;
 		content: "";
@@ -149,17 +165,20 @@ Home Page Styling
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: $gradient;
-		opacity: 0.9;
+		background: black;
+		opacity: 0.3;
 	}
 
-	h2 {
+
+	h1 {
 		position: relative;
+		text-align: center;
 		color: #e8e8e8;
-		font-size: 36px;
+		font-size: 60px;
 		margin-bottom: 20px;
-		z-index: 1;
+		line-height: 1.4;
 		text-shadow: 0 5px 20px rgba(0,0,0,0.25);
+		z-index: 1;
 	}
 
 	form {
@@ -168,6 +187,7 @@ Home Page Styling
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: flex-start;
+		max-width: 600px;
 		z-index: 1;
 	}
 
@@ -210,8 +230,7 @@ Home Page Styling
 		color: $c3;
 		background: white;
 		text-transform: uppercase;
-		font-family: $fontTitle;
-		margin: 20px 5px 0;
+		margin: 20px auto 0;
 		box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 		transition: $transition;
 
@@ -228,6 +247,7 @@ Home Page Styling
 // HOME CONTACT BANNER
 
 .homeContact {
+	background: $c4;
 	text-align: center;
 
 	.devWrapper {
@@ -244,6 +264,10 @@ Home Page Styling
 		margin: 0 auto 4%;
 	}
 
+	h3 {
+		font-family: $fontMain;
+	}
+
 	.fullButton {
 		margin-top: 6%;
 	}
@@ -253,11 +277,9 @@ Home Page Styling
 // NEIGHBOURHOODS
 
 .homeNeighbourhoods {
-	background: $c4;
-
 	.devWrapper {
 		text-align: center;
-		padding-bottom: 2%;
+		padding: 8% 2% 2%;
 	}
 
 	h2 {
@@ -307,6 +329,7 @@ Home Page Styling
 
 	h3 {
 		display: inline-block;
+		font-family: $fontMain;
 		background: $c3;
 		padding: 2px 15px;
 		font-size: 16px;
@@ -337,7 +360,7 @@ Home Page Styling
 			font-size: 30px;
 			opacity: 0;
 			transition: $transition;
-			z-index: 5;
+			z-index: 4;
 		}
 
 		&:after {
@@ -497,7 +520,6 @@ Blog Styling
 		color: white;
 		text-transform: uppercase;
 		font-weight: 300;
-		font-family: $fontTitle;
 		font-size: 12px;
 		letter-spacing: 2px;
 		z-index: 1;
@@ -557,7 +579,6 @@ Blog Styling
 		text-transform: uppercase;
 		text-decoration: none;
 		letter-spacing: 1px;
-		font-family: $fontTitle;
 		color: $c1;
 		font-weight: 400;
 		padding: 5px 10px;
@@ -571,9 +592,161 @@ Blog Styling
 	}
 }
 
+.blogBanner {
+	.devWrapper {
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		padding: 10% 8%;
+		text-align: center;
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background: black;
+			opacity: 0.2;
+		}
+	}
+
+	h1,
+	span {
+		position: relative;
+		z-index: 1;
+	}
+
+	h1 {
+		font-size: 34px;
+		letter-spacing: 0;
+	}
+
+	span {
+		display: inline-block;
+		color: white;
+		background: $gradient;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 2px;
+		margin-bottom: 15px;
+	}
+}
+
+.postContent {
+	h2,
+	h3,
+	h4,
+	h5 {
+		padding: 20px 0 5px;
+	}
+
+	h2 {
+		font-family: $fontMain;
+		font-size: 30px;
+	}
+
+	h3 {
+		font-size: 26px;
+	}
+
+	h4 {
+		font-size: 22px;
+	}
+
+	h5 {
+		font-size: 20px;
+	}
+
+	p {
+		padding: 10px 0;
+	}
+
+	ul,
+	ol {
+		padding: 2px 0 2px 20px;
+	}
+
+	a {
+		color: $c1;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: $c3;
+			text-decoration: underline;
+		}
+	}
+}
+
 /*
 ====================================
 End Blog Styling
+====================================
+*/
+
+/*
+====================================
+End Contact Styling
+====================================
+*/
+
+.contactSection .devWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.contactForm {
+	width: 45%;
+
+	h2 {
+		font-size: 30px;
+		text-align: center;
+		margin-bottom: 6%;
+		color: $c3;
+	}
+
+	form > p > label,
+	.divider {
+		text-transform: uppercase;
+		font-size: 14px;
+		color: $c3;
+	}
+}
+
+.contactImgs {
+	width: 45%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 400px;
+	margin-top: 6%;
+
+	div {
+		background-size: cover;
+		background-position: center;
+		height: calc(50% - 20px);
+		margin: 10px;
+
+
+		&:nth-child(1) {
+			width: calc(100% - 20px);
+		}
+
+		&:nth-child(2),
+		&:nth-child(3) {
+			width: calc(50% - 20px);
+		}
+	}
+}
+
+/*
+====================================
+End Contact Styling
 ====================================
 */
 

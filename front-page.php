@@ -3,119 +3,95 @@
 
 <div class="banner">
 	<div class="devWrapper">
-		<div class="leftBanner">
-			<h1>Rent Office Space in Toronto</h1>
-		</div>
+		<h1>Rent Office Space in Toronto</h1>
+		<form action=http://offices.rentofficespacetoronto.com/index.php method=get>
+			<div class="select">
+				<select id="area" class="form-control" name="area">
+					<option value="">Area</option>
+					<option value="">All of Toronto</option>
+					<option value="Downtown">Downtown Core</option>
+					<option value="East_York">East York</option>
+					<option value="Etobicoke">Etobicoke</option>
+					<option value="Junction">The Junction</option>
+					<option value="King_East">King East</option>
+					<option value="King_West">King West</option>
+					<option value="Liberty_Village">Liberty Village</option>
+					<option value="Midtown">Midtown</option>
+					<option value="Toronto North">Toronto North</option>
+					<option value="Parkdale">Parkdale</option>
+					<option value="Queen_West">Queen West</option>
+					<option value="Yonge_and_Dundas">Yonge and Dundas</option>
+					<option value="Yorkville">Yorkville</option>
+				</select>
+			</div>
 
-		<div class="rightBanner">
-			<h2>Find Your Space</h2>
-			<form action=http://offices.rentofficespacetoronto.com/index.php method=get>
-				<div class="select">
-					<select id="area" class="form-control" name="area">
-						<option value="">Area</option>
-						<option value="">All of Toronto</option>
-						<option value="Downtown">Downtown Core</option>
-						<option value="East_York">East York</option>
-						<option value="Etobicoke">Etobicoke</option>
-						<option value="Junction">The Junction</option>
-						<option value="King_East">King East</option>
-						<option value="King_West">King West</option>
-						<option value="Liberty_Village">Liberty Village</option>
-						<option value="Midtown">Midtown</option>
-						<option value="Toronto North">Toronto North</option>
-						<option value="Parkdale">Parkdale</option>
-						<option value="Queen_West">Queen West</option>
-						<option value="Yonge_and_Dundas">Yonge and Dundas</option>
-						<option value="Yorkville">Yorkville</option>
-					</select>
-				</div>
+			<div class="select">
+				<select class="form-control" name="ListPrice_min">
+					<option selected="selected" value="">Monthly Price Min.</option>
+					<option value="">No Minimum</option>
+					<OPTION VALUE="5000">$5,000</OPTION>
+					<OPTION VALUE="10000">$10,000</OPTION>
+					<OPTION VALUE="20000">$20,000</OPTION>
+					<OPTION VALUE="30000">$30,000</OPTION>
+					<OPTION VALUE="40000">$40,000</OPTION>
+					<OPTION VALUE="45000">$45,000</OPTION>
+					<OPTION VALUE="50000">$50,000</OPTION>
+				</select>
+			</div>
 
-				<div class="select">
-					<select class="form-control" name="ListPrice_min">
-						<option selected="selected" value="">Monthly Price Min.</option>
-						<option value="">No Minimum</option>
-						<OPTION VALUE="5000">$5,000</OPTION>
-						<OPTION VALUE="10000">$10,000</OPTION>
-						<OPTION VALUE="20000">$20,000</OPTION>
-						<OPTION VALUE="30000">$30,000</OPTION>
-						<OPTION VALUE="40000">$40,000</OPTION>
-						<OPTION VALUE="45000">$45,000</OPTION>
-						<OPTION VALUE="50000">$50,000</OPTION>
-						<OPTION VALUE="55000">$55,000</OPTION>
-						<OPTION VALUE="60000">$60,000</OPTION>
-						<OPTION VALUE="70000">$70,000</OPTION>
-						<OPTION VALUE="75000">$75,000</OPTION>
-						<OPTION VALUE="100000">$100,000</OPTION> 
-					</select>
-				</div>
+			<div class="select">
+				<select class="form-control" name="ListPrice_max">
+					<option selected="selected" value="">Monthly Price Max.</option>
+					<option value="">Unlimited</option>     
+					<OPTION VALUE="10000">$10,000</OPTION>
+					<OPTION VALUE="20000">$20,000</OPTION>
+					<OPTION VALUE="30000">$30,000</OPTION>
+					<OPTION VALUE="40000">$40,000</OPTION>
+					<OPTION VALUE="45000">$45,000</OPTION>
+					<OPTION VALUE="50000">$50,000</OPTION>
+				</select>
+			</div>
 
-				<div class="select">
-					<select class="form-control" name="ListPrice_max">
-						<option selected="selected" value="">Monthly Price Max.</option>
-						<option value="">Unlimited</option>     
-						<OPTION VALUE="10000">$10,000</OPTION>
-						<OPTION VALUE="20000">$20,000</OPTION>
-						<OPTION VALUE="30000">$30,000</OPTION>
-						<OPTION VALUE="40000">$40,000</OPTION>
-						<OPTION VALUE="45000">$45,000</OPTION>
-						<OPTION VALUE="50000">$50,000</OPTION>
-						<OPTION VALUE="55000">$55,000</OPTION>
-						<OPTION VALUE="60000">$60,000</OPTION>
-						<OPTION VALUE="70000">$70,000</OPTION>
-						<OPTION VALUE="75000">$75,000</OPTION>
-						<OPTION VALUE="100000">$100,000</OPTION>
-					</select>
-				</div>
+			<div class="select">
+				<select id="SqFtHeated_min" class="form-control" name="SqFtHeated_min">
+					<option selected="selected" value="">Square Footage Min.</option>
+					<option value="">No Minimum</option>   
+					<option value="1000">1,000</option>
+					<option value="2000">2,000</option>
+					<option value="3000">3,000</option>
+					<option value="4000">4,000</option>
+					<option value="5000">5,000</option>
+					<option value="10000">10,000</option>
+				</select>
+			</div>
 
-				<div class="select">
-					<select id="SqFtHeated_min" class="form-control" name="SqFtHeated_min">
-						<option selected="selected" value="">Square Footage Min.</option>
-						<option value="">No Minimum</option>   
-						<option value="1000">1,000</option>
-						<option value="2000">2,000</option>
-						<option value="3000">3,000</option>
-						<option value="4000">4,000</option>
-						<option value="5000">5,000</option>
-						<option value="10000">10,000</option>
-					</select>
-				</div>
+			<div class="select">
+				<select id="SqFtHeated_max" class="form-control" name="SqFtHeated_max">
+					<option selected="selected" value="">Square Footage Max.</option>
+					<option value="">Unlimited</option>
+					<option value="1000">1,000</option>
+					<option value="2000">2,000</option>
+					<option value="3000">3,000</option>
+					<option value="4000">4,000</option>
+					<option value="5000">5,000</option>
+					<option value="10000">10,000</option>
+					<option value="50000">50,000</option>
+				</select>
+			</div>
 
-				<div class="select">
-					<select id="SqFtHeated_max" class="form-control" name="SqFtHeated_max">
-						<option selected="selected" value="">Square Footage Max.</option>
-						<option value="">Unlimited</option>
-						<option value="1000">1,000</option>
-						<option value="2000">2,000</option>
-						<option value="3000">3,000</option>
-						<option value="4000">4,000</option>
-						<option value="5000">5,000</option>
-						<option value="10000">10,000</option>
-						<option value="50000">50,000</option>
-					</select>
-				</div>
+			<button type="submit" name="Submit" value="Go">Find Your Space</button>				
+			<input name="limit_start" type="hidden" value="0" />
+			<input name="limit_step" type="hidden" value="25" />
+			<input name="query_id" type="hidden" value="sixspace" />
+			<input name="unique_frame_link" type="hidden" value="sixspace" />
+			<input type=hidden name=action value=select>
+			<input type=hidden name=displayNavigationBanner value=no>
+			<input type=hidden name=displaySortBy value=no>
+			<input type=hidden name=displayDisclaimer value=no>
 
-				<button type="submit" name="Submit" value="Go">Search</button>				
-				<input name="limit_start" type="hidden" value="0" />
-				<input name="limit_step" type="hidden" value="25" />
-				<input name="query_id" type="hidden" value="sixspace" />
-				<input name="unique_frame_link" type="hidden" value="sixspace" />
-				<input type=hidden name=action value=select>
-				<input type=hidden name=displayNavigationBanner value=no>
-				<input type=hidden name=displaySortBy value=no>
-				<input type=hidden name=displayDisclaimer value=no>
-
-			</form>
-		</div> <!-- .rightBanner -->
+		</form>
 	</div> <!-- .devWrapper -->
 </div> <!-- .banner -->
-
-<div class="homeContact">
-	<div class="devWrapper">
-		<h2>Toronto Commercial Office Space For Lease</h2>
-		<h3>Need office space in Toronto? We help organizations of any kind find the perfect office space in Toronto.</h3>
-		<a class="fullButton" href="http://rentofficespacetoronto.com/contact-us/">Get in Touch</a>
-	</div>
-</div>
 
 <div class="homeNeighbourhoods">
 	<div class="devWrapper">
@@ -268,12 +244,11 @@
 
 <div class="homeContact">
 	<div class="devWrapper">
-		<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit!</h2>
-		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, deleniti eaque, nesciunt voluptas magni nobis consequatur sequi culpa deserunt dignissimos.</h3>
+		<h2>Toronto Commercial Office Space For Lease</h2>
+		<h3>Need office space in Toronto? We help organizations of any kind find the perfect office space in Toronto.</h3>
 		<a class="fullButton" href="http://rentofficespacetoronto.com/contact-us/">Get in Touch</a>
 	</div>
 </div>
-
 
 <div class="homeSocial">
 	<div class="devWrapper">
